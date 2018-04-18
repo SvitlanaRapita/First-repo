@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body, h1, h2, h3, h4, p, ul,ol {
+  padding: 0;
+  margin: 0;
+}
+
+.accordionWidget {
+  width: 400px;
+  margin: 5rem auto;
+}
+
+.accordion {
+  transition: all .3s linear;
+  transform-origin: top;
+  &_content {
+    overflow: hidden;
+    height: 0;
+
+  }
+  &_active {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(2, 2, 2, 0.4);
+    .accordion_content {
+      height: 100%;
+    }
+  }
+}
+
+.accordion_title {
+  background: #3F51B5;
+  padding: 20px 30px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  overflow: hidden;
+  transition: background .3s;
+  &:hover {
+    cursor: pointer;
+    background: #3949AB;
+  }
+}
+
+p {
+  padding: 25px 30px 40px;
+  background: #E8EAF6;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
